@@ -13,7 +13,22 @@ class App extends Component {
 
         this.state = {
             films: [],
+            btn: false,
 
+        }
+
+    }
+
+
+    toggle() {
+        if (this.state.btn === false) {
+            let newState = { btn: true };
+            this.setState(newState);
+
+        }
+        else {
+            let newState = { btn: false };
+            this.setState(newState);
         }
 
     }
@@ -27,14 +42,13 @@ class App extends Component {
                 let newState = {
                     films: [...data]
                 };
-
-
                 this.setState(newState);
                 console.log(this.state.films)
-
-
-
             })
+    }
+
+    handleClick(event) {
+        this.toggle();
     }
 
 
@@ -42,9 +56,20 @@ class App extends Component {
 
 
     render() {
-        return (
-            <React.Fragment>
-              
+        if (this.state.btn === true) {
+            return (
+                <React.Fragment>
+
+
+
+                    <img className="img-fluid" src="https://github.com/covalence-io/reacting-to-apis/blob/master/logo.png?raw=true" alt="asdf" />
+
+                    <div>
+                        <button type="button" className="btn btn-primary btn-lg"
+                            onClick={(event) => { this.handleClick(event) }}>Load Films!</button>
+                    </div>
+
+
                     {this.state.films.map((film, index) => {
                         return (
                             <div key={index} className="card"  >
@@ -62,17 +87,26 @@ class App extends Component {
                             </div>
                         )
                     })}
+                </React.Fragment>
+            )
+        }
+        else {
 
-              
+            return (
+                <React.Fragment>
 
+                    <img className="img-fluid" src="https://github.com/covalence-io/reacting-to-apis/blob/master/logo.png?raw=true" alt="asdf" />
 
+                    <div>
+                        <button type="button" className="btn btn-primary btn-lg"
+                            onClick={(event) => { this.handleClick(event) }}>Load Films!</button>
+                    </div>
+                </React.Fragment>
+            )
+        }
 
-            </React.Fragment>
-        )
     }
-
 }
-
 
 
 
