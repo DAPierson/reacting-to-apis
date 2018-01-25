@@ -1,0 +1,11 @@
+ .card{
+    width: 40em;
+    border: black;
+border-width: 3px;
+border-style: solid;
+float: left;
+height: 50em;
+position: center;
+left: 4em;
+
+ }
