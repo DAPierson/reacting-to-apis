@@ -22,3 +22,12 @@ left: 4em;
 
 
  }
+ .cards{
+     width: 15em;
+     border : black;
+     border-width: 3px;
+     border-style: solid;
+     float: left;
+     height: 15em;
+
+ }
