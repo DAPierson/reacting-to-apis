@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-
-
-
-
-
 class People extends Component {
     constructor(props) {
         super(props)
@@ -14,10 +9,6 @@ class People extends Component {
             people: [],
         }
     }
-
-
-
-
 
     componentDidMount() {
         fetch('https://ghibliapi.herokuapp.com/people/')
@@ -33,12 +24,6 @@ class People extends Component {
                 // console.log(this.props.match)
             })
     }
-
-
-
-
-
-
 
     render() {
         return (
@@ -61,23 +46,10 @@ class People extends Component {
                         </div>
                         </div>
 
-
-
                     )
                 })}
                 
             </React.Fragment>
-
-            
-
-
-
-
-
-
-
-
-
 
         )
     }

@@ -26,8 +26,6 @@ class App extends Component {
 
         return (
 
-
-
             <Router>
                 <React.Fragment>
                     <Link to="/"> Home </Link>
@@ -45,25 +43,13 @@ class App extends Component {
                 </React.Fragment>
             </Router>
 
-
-
-
         )
-
-
-
-
-
-
-
 
 
     }
 
 
 }
-
-
 
 export default App
 

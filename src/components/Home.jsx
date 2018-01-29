@@ -16,32 +16,12 @@ class Home extends Component{
         }
     }
 
-
-
-
-
-
-
-
-
-
 render(){
     return(
 
 
 
         <img className="img-fluid" src="https://github.com/covalence-io/reacting-to-apis/blob/master/logo.png?raw=true" alt="asdf" />
-
-
-
-        
-
-
-
-
-
-
-
 
     )
 }
